@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/11/26 21:16:31.000.799,=G:\Delphi\Unit1.cpp</Transaction>
+    <Transaction>2018/11/26 21:16:32.000.114,=G:\Delphi\Project1PCH1.h</Transaction>
+    <Transaction>2018/11/26 21:16:53.000.548,G:\Delphi\Unit1.h=G:\CrossPlatformTetris\MultiDeviceTetris\Unit1.h</Transaction>
+    <Transaction>2018/11/26 21:16:53.000.548,G:\Delphi\Unit1.cpp=G:\CrossPlatformTetris\MultiDeviceTetris\Unit1.cpp</Transaction>
+    <Transaction>2018/11/26 21:16:53.000.548,G:\Delphi\Unit1.fmx=G:\CrossPlatformTetris\MultiDeviceTetris\Unit1.fmx</Transaction>
+    <Transaction>2018/11/26 21:16:57.000.747,G:\Delphi\Project1PCH1.h=G:\CrossPlatformTetris\MultiDeviceTetris\Project1PCH1.h</Transaction>
+    <Transaction>2018/11/26 21:17:13.000.804,G:\Delphi\Project1.cbproj=G:\CrossPlatformTetris\MultiDeviceTetris\MultiDeviceTetris.cbproj</Transaction>
+    <Transaction>2018/11/26 21:17:13.000.757,G:\CrossPlatformTetris\MultiDeviceTetris\Project1PCH1.h=G:\CrossPlatformTetris\MultiDeviceTetris\MultiDeviceTetrisPCH1.h</Transaction>
+    <Transaction>2018/11/26 21:17:38.000.350,=G:\CrossPlatformTetris\Tetris.h</Transaction>
+    <Transaction>2018/11/26 21:17:38.000.298,=G:\CrossPlatformTetris\Tetris.cpp</Transaction>
+    <Transaction>2018/11/29 21:30:10.000.976,=G:\CrossPlatformTetris\MultiDeviceTetris\Tetris.cpp</Transaction>
+    <Transaction>2018/11/30 19:38:27.000.002,G:\CrossPlatformTetris\MultiDeviceTetris\Tetris.cpp=</Transaction>
+    <Transaction>2018/11/30 19:39:34.000.246,=G:\CrossPlatformTetris\MultiDeviceTetris\Tetris.c</Transaction>
+    <Transaction>2018/11/30 22:28:08.000.877,=G:\CrossPlatformTetris\Tetris.c</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android=""/>
+	</ActiveMobileDevice>
+	<BT_BuildType>Debug</BT_BuildType>
+</BorlandProject>

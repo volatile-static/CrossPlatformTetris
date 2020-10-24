@@ -1,0 +1,102 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  object GameTimer: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = GameTimerTimer
+    Left = 264
+    Top = 64
+  end
+  object Panel1: TPanel
+    Align = FitLeft
+    Padding.Bottom = 36.000000000000000000
+    Size.Width = 126.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object InitButton: TButton
+      Align = MostTop
+      Margins.Left = 3.000000000000000000
+      Margins.Top = 3.000000000000000000
+      Margins.Right = 3.000000000000000000
+      Position.X = 3.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 46.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = #24320#22987
+      OnClick = InitButtonClick
+    end
+    object Layout1: TLayout
+      Align = Bottom
+      Position.Y = 318.000000000000000000
+      Size.Width = 126.000000000000000000
+      Size.Height = 126.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      object sbDown: TSpeedButton
+        Align = Bottom
+        Enabled = False
+        Position.Y = 94.000000000000000000
+        Size.Width = 126.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'arrowdowntoolbuttonborderedright'
+        Text = 'S'
+      end
+      object sbLeft: TSpeedButton
+        Align = Left
+        Enabled = False
+        ImageIndex = 1
+        Position.Y = 31.360000610351560000
+        Size.Width = 46.125000000000000000
+        Size.Height = 62.639999389648440000
+        Size.PlatformDefault = False
+        StyleLookup = 'priortoolbuttonbordered'
+        Text = 'A'
+        OnClick = sbLeftClick
+      end
+      object sbRight: TSpeedButton
+        Align = Right
+        Enabled = False
+        Position.X = 85.000000000000000000
+        Position.Y = 31.360000610351560000
+        Size.Width = 41.000000000000000000
+        Size.Height = 62.639999389648440000
+        Size.PlatformDefault = False
+        StyleLookup = 'nexttoolbuttonbordered'
+        Text = 'D'
+        OnClick = sbRightClick
+      end
+      object sbUp: TSpeedButton
+        Align = Top
+        Enabled = False
+        Size.Width = 126.000000000000000000
+        Size.Height = 31.360000610351560000
+        Size.PlatformDefault = False
+        StyleLookup = 'refreshtoolbuttonbordered'
+        Text = 'W'
+        OnClick = sbUpClick
+      end
+    end
+  end
+  object TetrisLayout: TLayout
+    Align = Client
+    Size.Width = 514.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+  end
+end

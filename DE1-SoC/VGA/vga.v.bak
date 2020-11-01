@@ -1,0 +1,79 @@
+module vga(input rst, clk_25,output VGA_BLANK_N,VGA_CLK,VGA_HS,VGA_SYNC_N,VGA_VS,[10:0] X,[10:0] Y);
+//Horizontal Parameter
+    parameter H_FRONT = 16;
+    parameter H_SYNC  = 96;
+    parameter H_BACK  = 48;
+    parameter H_ACT   = 640;
+    parameter H_BLANK = H_FRONT+H_SYNC+H_BACK;
+    parameter H_TOTAL = H_FRONT+H_SYNC+H_BACK+H_ACT;
+    //Vertical Parameter
+    parameter V_FRONT = 11;
+    parameter V_SYNC  = 2;
+    parameter V_BACK  = 32;
+    parameter V_ACT   = 480;
+    parameter V_BLANK = V_FRONT+V_SYNC+V_BACK;
+    parameter V_TOTAL = V_FRONT+V_SYNC+V_BACK+V_ACT;
+	 
+   reg[9:0] H_Cont; //行扫描计数器
+    reg[9:0] V_Cont; //列扫描计数器
+    reg vga_hs;
+    reg vga_vs;
+    reg[10:0] active_x,active_y;
+    assign VGA_HS = vga_hs;
+    assign VGA_VS = vga_vs;
+     wire CLK_25;
+    wire clk;
+    divider #(0)d(CLOCK_50, CLK_25);
+	 
+   always@(posedge CLK_25, negedge rst) //Horizontal Generator:Refer to the pixel clock
+      begin
+        if (!rst)
+          begin
+            H_Cont <= 0;
+            vga_hs <= 1;
+            X      <= 0;
+          end
+        else
+          begin
+            if (H_Cont<H_TOTAL)
+                H_Cont <= H_Cont + 1'b1;
+            else
+                H_Cont <= 0;
+                //horizontal Sync
+            if (H_Cont == H_FRONT - 1) //Front porch end
+                vga_hs <= 1'b0;
+            if (H_Cont == H_FRONT+H_SYNC - 1)
+                vga_hs <= 1'b1; //Current X
+            if (H_Cont >= H_BLANK)
+                X <= H_Cont - H_BLANK;
+            else
+                X <= 0;
+          end
+      end 
+                        
+    always@(posedge VGA_HS, negedge rst) // vertical Generator: Refer to the horizontal sync
+      begin
+       if (!rst)
+         begin
+            V_Cont <= 0; 
+            vga_vs <= 1;
+            Y <= 0;
+         end    
+        else 
+         begin 
+            if (V_Cont < V_TOTAL)
+                V_Cont <= V_Cont + 1'b1;   
+            else 
+                 V_Cont <= 0; //Vertical Sync
+            if (V_Cont == V_FRONT - 1) 
+                vga_vs <= 1'b0;
+            if (V_Cont == V_FRONT + V_SYNC - 1) 
+                vga_vs <= 1'b1; //Current Y
+            if (V_Cont >= V_BLANK) 
+                Y <= V_Cont - V_BLANK;
+            else 
+                Y <= 0; 
+        end 
+      end 
+
+endmodule

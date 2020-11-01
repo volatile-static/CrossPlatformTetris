@@ -1,0 +1,15 @@
+09:23:57 **** Incremental Build of configuration Debug for project LinuxTetris ****
+make all 
+'Building file: ../main.c'
+'Invoking: GCC C Compiler 4 [arm-linux-gnueabihf]'
+arm-linux-gnueabihf-gcc -I"E:\DEVELOPMENT\TOOLS\Quartus\soceds\embedded\ip\altera\hps\altera_hps\hwlib\include" -I"E:\DEVELOPMENT\TOOLS\Quartus\soceds\embedded\ip\altera\hps\altera_hps\hwlib\include\soc_a10\socal" -I"E:\DEVELOPMENT\TOOLS\Quartus\soceds\embedded\ip\altera\hps\altera_hps\hwlib\include\soc_a10" -O0 -g -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: LinuxTetris'
+'Invoking: GCC C Linker 4 [arm-linux-gnueabihf]'
+arm-linux-gnueabihf-gcc  -o "LinuxTetris"  ./main.o   
+'Finished building target: LinuxTetris'
+' '
+
+09:24:00 Build Finished (took 3s.752ms)
+

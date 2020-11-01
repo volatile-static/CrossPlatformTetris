@@ -1,0 +1,6 @@
+12:12:34 **** Build of configuration Default for project hps_gpio ****
+make a 
+make: *** No rule to make target 'a'.  Stop.
+
+12:12:34 Build Finished (took 111ms)
+

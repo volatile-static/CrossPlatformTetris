@@ -1,0 +1,5 @@
+Info (10281): Verilog HDL Declaration information at vga.v(2): object "VGA_HS" differs only in case from object "vga_hs" in the same scope File: C:/Users/hlK/Desktop/VGA/vga.v Line: 2
+Info (10281): Verilog HDL Declaration information at vga.v(2): object "VGA_VS" differs only in case from object "vga_vs" in the same scope File: C:/Users/hlK/Desktop/VGA/vga.v Line: 2
+Info (10281): Verilog HDL Declaration information at de1_soc.v(31): object "VGA_R" differs only in case from object "vga_r" in the same scope File: C:/Users/hlK/Desktop/VGA/de1_soc.v Line: 31
+Info (10281): Verilog HDL Declaration information at de1_soc.v(29): object "VGA_G" differs only in case from object "vga_g" in the same scope File: C:/Users/hlK/Desktop/VGA/de1_soc.v Line: 29
+Info (10281): Verilog HDL Declaration information at de1_soc.v(27): object "VGA_B" differs only in case from object "vga_b" in the same scope File: C:/Users/hlK/Desktop/VGA/de1_soc.v Line: 27

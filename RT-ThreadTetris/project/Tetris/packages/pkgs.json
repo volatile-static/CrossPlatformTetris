@@ -1,0 +1,12 @@
+[
+ {
+  "path": "/packages/misc/vt100", 
+  "ver": "latest", 
+  "name": "VT100"
+ }, 
+ {
+  "path": "/packages/misc/tetris", 
+  "ver": "latest", 
+  "name": "TETRIS"
+ }
+]
